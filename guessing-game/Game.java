@@ -37,18 +37,32 @@ public class Game {
       System.out.print("Your guess?");
       int guess = input.nextInt();
       tryCount++;
+        if(guess == number){
+          System.out.println("Correct! You Win!");
+          System.out.println("It took you " + tryCount + " tries!");
+          break;
+        }
+        else if(guess < 0 || guess > 100){
+          System.out.println("You fool! Try following directions and picking a valid number between 0 and 100");
+        }
+        else if(number > guess){
+          System.out.println("Nope! The number is higher. Guess again.");
+        }
+        else if(number < guess){
+          System.out.println("Nope! The number is lower. Guess again.");
+        } 
+        // else {
 
-      if(guess == number){
-        System.out.println("Correct! You Win!");
-        System.out.println("It took you " + tryCount + " tries!");
-        break;
-      }
-      else if(number > guess){
-        System.out.println("Nope! The number is higher. Guess again.");
-      }
-      else {
-        System.out.println("Nope! The number is lower. Guess again.");
-      }
+        // }
+          try {
+            
+
+          }
+          catch (NumberFormatException e) {
+            String bad_input = input.next();
+            System.out.println("Slow down silly! That is not an integer. Try again");
+            continue;
+          }
     }
   }
 }

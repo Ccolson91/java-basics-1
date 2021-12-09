@@ -2,7 +2,7 @@ public class Drills {
   public static void main(String[] args) {
 
     // Variables & Data Types
-    
+
     String fName = "Luke";
     String lName = "Skywalker";
     String bYear = "19 BBY";
@@ -52,6 +52,5 @@ public class Drills {
       System.out.println("I'll have the tasty beverage");
     else
       System.out.println("I'll pass");
-
   } 
 }
